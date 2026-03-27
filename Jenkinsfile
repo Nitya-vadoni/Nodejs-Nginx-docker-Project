@@ -7,7 +7,7 @@ pipeline {
         IMAGE_NGINX = "${DOCKER_USER}/nginx-proxy"
         VM_IP = "98.92.240.75"
     }
-
+	
         stage('Build Docker Images') {
             steps {
                 sh 'docker build -t $IMAGE_NODE ./node-app'
@@ -58,4 +58,4 @@ pipeline {
             }
         }
     }
-}
+
