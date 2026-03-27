@@ -8,14 +8,6 @@ pipeline {
         VM_IP = "98.92.240.75"
     }
 
-    stages {
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Nitya-vadoni/Nodejs-Nginx-docker-Project.git'
-            }
-        }
-
         stage('Build Docker Images') {
             steps {
                 sh 'docker build -t $IMAGE_NODE ./node-app'
