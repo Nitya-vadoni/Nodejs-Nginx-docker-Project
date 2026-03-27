@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_USER = "your_dockerhub_username"
+        DOCKER_USER = "nityavadoni"
         IMAGE_NODE = "${DOCKER_USER}/node-app"
         IMAGE_NGINX = "${DOCKER_USER}/nginx-proxy"
-        VM_IP = "your_target_vm_public_ip"
+        VM_IP = "98.92.240.75"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo.git'
+                git 'https://github.com/Nitya-vadoni/Nodejs-Nginx-docker-Project.git'
             }
         }
 
